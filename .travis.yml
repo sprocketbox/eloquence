@@ -1,0 +1,24 @@
+language: php
+
+php:
+  - 7.3
+  - 7.4
+
+matrix:
+  fast_finish: true
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_install:
+  - travis_retry composer self-update
+
+install:
+  - travis_retry composer install --no-interaction --prefer-dist
+
+script:
+  - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+
+after_success:
+  - wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover coverage.clover
