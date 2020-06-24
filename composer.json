@@ -1,8 +1,11 @@
 {
   "name": "sprocketbox/eloquence",
-  "description": "A Laravel package that makes Eloquent more..well..Eloquent",
+  "description": "An identity map implementation for Eloquent",
   "keywords": [
-    "laravel"
+    "laravel",
+    "eloquent",
+    "orm",
+    "identity map"
   ],
   "type": "library",
   "license": "MIT",
