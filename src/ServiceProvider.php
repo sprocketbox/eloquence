@@ -1,20 +1,14 @@
 <?php
 
-namespace Sprocketbox\Package;
+namespace Sprocketbox\Eloquence;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
 {
-    public function boot(): void
+    public function register(): void
     {
-        $this->publishConfig();
-    }
-
-    private function publishConfig(): void
-    {
-        $this->publishes([
-            __DIR__ . '/../config/config.php' => config_path('package.php'),
-        ], 'config');
+        $this->app->bind(IdentityManager::class, fn() => IdentityManager::getInstance(), true);
+        $this->app->alias(IdentityManager::class, 'eloquence');
     }
 }

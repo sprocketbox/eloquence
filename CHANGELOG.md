@@ -7,4 +7,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/sprocketbox/laravel-package/compare/v1.1.1...develop
+[Unreleased]: https://github.com/sprocketbox/eloquence/tree/develop
