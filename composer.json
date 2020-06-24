@@ -1,8 +1,11 @@
 {
-  "name": "sprocketbox/laravel-package",
-  "description": "A Laravel package",
+  "name": "sprocketbox/eloquence",
+  "description": "An identity map implementation for Eloquent",
   "keywords": [
-    "laravel"
+    "laravel",
+    "eloquent",
+    "orm",
+    "identity map"
   ],
   "type": "library",
   "license": "MIT",
@@ -14,17 +17,17 @@
   ],
   "autoload": {
     "psr-4": {
-      "Sprocketbox\\Package\\": "src/"
+      "Sprocketbox\\Eloquence\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Sprocketbox\\Package\\Tests\\": "tests/"
+      "Sprocketbox\\Eloquence\\Tests\\": "tests/"
     }
   },
   "require": {
-    "php": "^7.3",
-    "laravel/framework": "^6.0"
+    "php": "^7.4",
+    "laravel/framework": "^7.0"
   },
   "require-dev": {
     "orchestra/testbench": "^4.0"
@@ -32,7 +35,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Sprocketbox\\Package\\ServiceProvider"
+        "Sprocketbox\\Eloquence\\ServiceProvider"
+      ],
+      "facades": [
+        "Sprocketbox\\Eloquence\\Facades\\Eloquence"
       ]
     }
   }
