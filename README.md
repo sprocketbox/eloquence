@@ -50,7 +50,7 @@ Sprocketbox\Eloquence\Concerns\MapsIdentity
 Any calls to `find()`, `findOrFail()` or `findOrNew()` on a model that uses this trait, will skip the query
 if a model has already been created using the provided id.
 
-Calls to `findMany()` will skip any ids that have already been used, only querying ones that are present in the cache.
+Calls to `findMany()` will skip any ids that have already been used, only querying ones that are not present in the cache.
 
 The query is only skipped if there are no where clauses, joins or having statements.
 
