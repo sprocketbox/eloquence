@@ -95,6 +95,18 @@ class IdentityManager
     }
 
     /**
+     * Remove all models from the identity map.
+     *
+     * @return $this
+     */
+    public function flushIdentities(): IdentityManager
+    {
+        $this->models = [];
+
+        return $this;
+    }
+
+    /**
      * Get all stored identities.
      *
      * @return array

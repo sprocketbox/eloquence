@@ -20,6 +20,7 @@ using the Identity Map design pattern ([P of EAA](https://martinfowler.com/eaaCa
     - [Finding](#finding)
     - [Hydrating](#hydrating)
     - [Belongs To](#belongsto)
+    - [Flushing](#flushing)
 - [How does it work](#how)
 - [Why?](#why)
 
@@ -67,6 +68,10 @@ updated, but will retain any changes you'd previously made.
 ### BelongsTo
 If a belongs to relationship is loaded (not belongs to many) without constraints and without `refreshIdentityMap()` being 
 called, the query will skip any model instances that already exist.
+
+### Flushing
+If you wish to flush the cached models, call `flushIdentities()` on an instance of `IdentityManager`, or on the `Eloquence`
+facade.
 
 ## How
 The `IdentityManager` stores an array containing all existing model instances and their identity.
