@@ -1,3 +1,5 @@
+# Due to a conflict in naming, this package has been renamed as [eloquent-identity](https://github.com/sprocketbox/eloquent-identity) to avoid confusion.
+
 # Eloquence
 [![Latest Stable Version](https://poser.pugx.org/sprocketbox/eloquence/v/stable.png)](https://packagist.org/packages/sprocketbox/eloquence) 
 [![Latest Unstable Version](https://poser.pugx.org/sprocketbox/eloquence/v/unstable.png)](https://packagist.org/packages/sprocketbox/eloquence) 
